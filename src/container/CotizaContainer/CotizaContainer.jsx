@@ -1,5 +1,6 @@
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+// import seguros from "../../seguros.json";
 
 const CotizaContainer = () => {
   const form = useRef();
@@ -141,195 +142,40 @@ const CotizaContainer = () => {
               />
             </div>
 
-            <div className="grid px-10 pb-10">
-              <h1 className="text-start mb-5 font-semibold text-gray-600">
-                Dejanos un mensaje con el seguro que desees cotizar
-              </h1>
-              <div className="text-start">
-                <p>Automotor</p>
-                <p>Combinado Familiar</p>
-                <p>Bicicletas</p>
-                <p>Integral de comercio</p>
-              </div>
-              {/* <div className="ml-5">
-                <div className="flex items-center">
-                  <input
-                    id="automotor"
-                    name="automotor"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="automotor"
-                    className="ml-2 text-lg text-gray-500 dark:text-gray-300"
-                  >
-                    Automotor
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="familia"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="familia"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Combinado familiar
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="bicicleta"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="bicicleta"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Bicicletas
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="comercio"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="comercio"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Integral de comercio
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="personales"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="personales"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Accidentes personales
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="art"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="art"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    ART
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="tecnico"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="tecnico"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Seguro técnico
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="civil"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="civil"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Responsabilidad civil
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="caucion"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="caucion"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Seguro de caución
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="embarcacion"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="embarcacion"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Embarcaciones
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="transporte"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="transporte"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Transportes
-                  </label>
-                </div>
-                <div className="flex items-center">
-                  <input
-                    id="vida"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 text-blue-600 bg-gray-100"
-                  />
-                  <label
-                    htmlFor="vida"
-                    className="ml-2 text-md text-gray-500 dark:text-gray-300"
-                  >
-                    Vida
-                  </label>
-                </div>
+            {/* <div className="grid px-10 pb-10"> */}
+            {/* <div className="text-start">
+                {seguros.map((e) => (
+                  <p>{e.name}</p>
+                ))}
               </div> */}
-            </div>
+            {/* <div className="ml-5">
+                {seguros.map((e) => (
+                  <>
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id={e.name}
+                        value={e.name}
+                        className="w-4 h-4 text-blue-600 bg-gray-100"
+                      />
+                      <label
+                        htmlFor={e.name}
+                        className="ml-2 text-lg text-gray-500 dark:text-gray-300"
+                      >
+                        {e.name}
+                      </label>
+                    </div>
+                  </>
+                ))}
+              </div> */}
+            {/* </div> */}
 
             <div className="grid px-10 pb-10">
               <label
                 htmlFor="msg"
                 className="text-start py-2 font-medium text-sky-700"
               >
-                Mensaje
+                Dejanos un mensaje con el seguro que desees cotizar
               </label>
               <textarea
                 name="msg"

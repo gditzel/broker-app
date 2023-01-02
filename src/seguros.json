@@ -1,0 +1,98 @@
+[
+{
+    "name": "Automotores",
+    "desc": "Ampara la responsabilidad civil, los daños materiales, robo e incendio.",
+    "image": "./img/icon16.png",
+    "imageAlt": "Automotores"
+},
+{
+    "name": "Combinado familiar",
+    "desc": "Cubre el edificio contra robo, incendio, hvtc, granizo, etc.",
+    "image": "./img/icon1.png",
+    "imageAlt": "Combinado familiar"
+},
+{
+    "name": "Bicicletas",
+    "desc": "Cobertura contra robo e incendio total.",
+    "image": "./img/icon2.png",
+    "imageAlt": "Bicicletas"
+},
+{
+    "name": "Integral de comercio",
+    "desc": "Se cubren los daños sufridos por incendio, robo, responsabilidad civil, cristales, etc.",
+    "image": "./img/icon3.png",
+    "imageAlt": "Integral de comercio"
+},
+{
+    "name": "Accidentes personales",
+    "desc": "Cobertura contra accidentes en tu trabajo y en el trayecto.",
+    "image": "./img/icon4.png",
+    "imageAlt": "Accidentes personales"
+},
+{
+    "name": "ART",
+    "desc": "Cubre los accidentes y enfermedades laborales de los empleados de las empresas.",
+    "image": "./img/icon5.png",
+    "imageAlt": "ART"
+},
+{
+    "name": "Seguro técnico",
+    "desc": "Ampara los daños que sufran maquinarias, autoelevadores, grúas y equipos electrónicos.",
+    "image": "./img/icon6.png",
+    "imageAlt": "Seguro técnico"
+},
+{
+    "name": "Responsabilidad Civil",
+    "desc": "Cubre los daños ocasionados a terceros.",
+    "image": "./img/icon7.png",
+    "imageAlt": "Responsabilidad Civil"
+},
+{
+    "name": "Caución",
+    "desc": "Garantía de contratos, anticipos financieros, fondos de reparo, aduaneras, concesiones, judiciales, y ambientales.",
+    "image": "./img/icon8.png",
+    "imageAlt": "Caución"
+},
+{
+    "name": "Embarcaciones",
+    "desc": "Embarcaciones con fines particulares de deporte y/o de placer.",
+    "image": "./img/icon9.png",
+    "imageAlt": "Embarcaciones"
+},
+{
+    "name": "Transportes",
+    "desc": "Ampara las pérdidas que puedan sufrir las cargas durante el transporte terrestre, marítimo, y/o aéreo.",
+    "image": "./img/icon10.png",
+    "imageAlt": "Transportes"
+},
+{
+    "name": "Integral de Consorcio",
+    "desc": "cubre el incendio de las partes comunes y no comunes de los consorcios, la responsabilidad civil, cristales, robo, etc.",
+    "image": "./img/icon11.png",
+    "imageAlt": "Integral de Consorcio"
+},
+{
+    "name": "Incendio",
+    "desc": "Se cubren los daños sufridos por incendio en integrales o viviendas particulares.",
+    "image": "./img/icon12.png",
+    "imageAlt": "Incendio"
+},
+{
+    "name": "Todo Riesgo Operativo",
+    "desc": "Ampara los daños y pérdidas materiales que sufran los bienes y/o intereses asegurados que se encuentren en proceso de construcción o montaje.",
+    "image": "./img/icon13.png",
+    "imageAlt": "Todo Riesgo Operativo"
+},
+{
+    "name": "Vida Colectivo",
+    "desc": "Cobertura por muerte a empleados de las empresas, grupos de afinidad, convenios colectivos, seguro de vida obligatorio, etc.",
+    "image": "./img/icon15.png",
+    "imageAlt": "Vida Colectivo"
+},
+{
+    "name": "Vida Individual",
+    "desc": "Cobertura por muerte e incapacidades permanentes.",
+    "image": "./img/icon14.png",
+    "imageAlt": "Vida Individual"
+}
+]

@@ -1,5 +1,8 @@
 import emailjs from "emailjs-com";
 import { useRef } from "react";
+import Phone from "../../utils/svg/Phone";
+import Email from "../../utils/svg/Email";
+import ig from "../../assets/img/ig.svg";
 
 const ContactContainer = () => {
   const form = useRef();
@@ -31,21 +34,32 @@ const ContactContainer = () => {
           Completa el formulario y te estaremos respondiendo a la brevedad.
         </p>
         <div className="md:flex mx-auto md:w-11/12 lg:w-10/12">
-          <div className="md:text-start md:w-96 space-y-5">
-            <p className="font-semibold text-xl text-gray-600">
-              Tel:
-              <span className="text-sky-900 text-sm"> 011 15-5045-2567</span>
-            </p>
-            <p className="font-semibold text-xl text-gray-600">
-              Email:
+          <div className="md:text-start md:w-96 space-y-5 ml-5">
+            <p className="font-semibold text-xl text-gray-600 flex gap-3">
+              <Phone />
               <span className="text-sky-900 text-sm">
-                {" "}
-                gonza.ditzel@hotmail.com
+                <a href="tel:1164418231">11 6441-8231</a>
               </span>
             </p>
-            <p className="font-semibold text-xl text-gray-600 pb-10">
-              IG
-              <span className="text-sky-900 text-sm"> @gonzaditzel</span>
+            <p className="font-semibold text-xl text-gray-600 flex gap-3">
+              <Email />
+              <span className="text-sky-900 text-sm">
+                <a href="mailto:tamaragiselleluque@gmail.com">
+                  tamaragiselleluque@gmail.com
+                </a>
+              </span>
+            </p>
+            <p className="font-semibold text-xl text-gray-600 pb-10 flex gap-3">
+              <img src={ig} alt="Instagram" />
+              <span className="text-sky-900 text-sm">
+                <a
+                  href="https://www.instagram.com/asseg.asesores/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  @asseg.asesores
+                </a>
+              </span>
             </p>
           </div>
 

@@ -1,20 +1,21 @@
-import icon from "../../assets/img/icon.jpg";
+import seguros from "../../seguros.json";
 
 const CardIcon = () => {
   return (
     <>
-      <div>
-        <div className="flex justify-center">
-          <img src={icon} alt="icon" />
+      {seguros.map((e) => (
+        <div>
+          <div className="flex justify-center h-40">
+            <img src={e.image} alt={e.imageAlt} />
+          </div>
+          <div className="text-center">
+            <h1 className="font-semibold">{e.name}</h1>
+            <p className="text-gray-600 px-10 mb-10 max-w-md mx-auto">
+              {e.desc}
+            </p>
+          </div>
         </div>
-        <div className="text-center">
-          <h1 className="font-semibold">Automotores</h1>
-          <p className="text-gray-600 px-10 mb-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ad a
-            temporibus unde in nobis.
-          </p>
-        </div>
-      </div>
+      ))}
     </>
   );
 };

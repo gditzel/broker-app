@@ -1,6 +1,5 @@
 import Banner from "../../assets/img/banner.jpg";
 import Wpp from "../../assets/img/wpp.png";
-// import Banner2 from "../../assets/img/banner2.jpg";
 import CardIconContainer from "../../container/CardIconContainer/CardIconContainer";
 import ContactContainer from "../../container/ContactContainer/ContactContainer";
 import CotizaContainer from "../../container/CotizaContainer/CotizaContainer";
@@ -46,10 +45,10 @@ const Home = () => {
         <CotizaContainer />
       </section>
 
-      <div className="fixed top-0 left-0 right-0 z-20 mt-96 md:mt-72">
+      <div className="fixed top-96 right-0 left-0 z-20">
         <a
           href="https://walink.co/c8315f"
-          className="absolute z-10 right-0 m-5 mt-52 md:mt-80"
+          className="absolute z-10 right-0 pt-96 mt-24 mr-5"
           rel="noreferrer"
           target="_blank"
         >
