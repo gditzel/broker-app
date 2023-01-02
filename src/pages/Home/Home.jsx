@@ -48,7 +48,7 @@ const Home = () => {
       <div className="fixed top-96 right-0 left-0 z-20">
         <a
           href="https://walink.co/c8315f"
-          className="absolute z-10 right-0 pt-96 mt-24 mr-5"
+          className="absolute z-50 right-0 mt-80 mr-10"
           rel="noreferrer"
           target="_blank"
         >
