@@ -4,7 +4,7 @@ const CardIcon = () => {
   return (
     <>
       {seguros.map((e) => (
-        <div>
+        <div key={e.name}>
           <div className="flex justify-center h-40">
             <img src={e.image} alt={e.imageAlt} />
           </div>

@@ -14,7 +14,7 @@ export default function Example() {
           <div className="mx-auto md:px-32">
             <div className="flex justify-between items-center">
               <a href="/">
-                <img className="h-20" src={Logo} alt="Logo" />
+                <img className="h-24" src={Logo} alt="Logo" />
               </a>
               <div className="items-center hidden sm:ml-6 sm:block w-96">
                 <ul className="flex justify-between">

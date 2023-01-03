@@ -1,0 +1,17 @@
+[
+    {
+        "type": "text",
+        "name": "name2",
+        "title": "Nombre y Apellido"
+    },
+    {
+        "type": "number",
+        "name": "tel2",
+        "title": "Teléfono"
+    },
+    {
+        "type": "email",
+        "name": "email2",
+        "title": "Email"
+    }
+]

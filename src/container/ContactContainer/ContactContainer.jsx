@@ -1,13 +1,36 @@
 import emailjs from "emailjs-com";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import formulario2 from "../../formulario2.json";
+import Swal from "sweetalert2";
+
 import Phone from "../../utils/svg/Phone";
 import Email from "../../utils/svg/Email";
 import ig from "../../assets/img/ig.svg";
 
 const ContactContainer = () => {
+  const [fields, setFields] = useState();
+
+  const clearForm = () => {
+    setFields("");
+  };
+
   const form = useRef();
   const enviarEmail = (e) => {
     e.preventDefault();
+
+    const email = e.target.email2.value;
+
+    const regexEmail =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (email !== "" && !regexEmail.test(email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Debes escribir una dirección válida",
+        timer: 1500,
+      });
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -23,8 +46,20 @@ const ContactContainer = () => {
         (error) => {
           console.log(error.text);
         }
-      )
-      .finally(window.location.reload(false));
+      );
+    Swal.fire({
+      title: "Mensaje enviado con exito",
+      icon: "success",
+      timer: 1500,
+    })
+      .then(clearForm)
+      .finally(
+        // eslint-disable-next-line no-global-assign
+        (setTimeout = () => {
+          window.location.reload(true);
+        }),
+        5000
+      );
   };
   return (
     <>
@@ -65,64 +100,39 @@ const ContactContainer = () => {
 
           <div className="w-screen">
             <form ref={form} onSubmit={enviarEmail}>
-              <div className="grid px-10">
-                <label
-                  htmlFor="name"
-                  className="text-start py-2 font-medium text-sky-700"
-                >
-                  Nombre
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  className="bg-sky-50 border border-sky-400"
-                />
-              </div>
-
-              <div className="grid px-10 my-5">
-                <label
-                  htmlFor="tel"
-                  className="text-start py-2 font-medium text-sky-700"
-                >
-                  Teléfono{" "}
-                </label>
-                <input
-                  type="tel"
-                  name="tel"
-                  id="tel"
-                  className="bg-sky-50 border border-sky-400"
-                />
-              </div>
-
-              <div className="grid px-10 my-5">
-                <label
-                  htmlFor="email"
-                  className="text-start py-2 font-medium text-sky-700"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="bg-sky-50 border border-sky-400"
-                />
-              </div>
+              {formulario2.map((e) => (
+                <div className="grid px-10" key={e.name}>
+                  <label
+                    htmlFor={e.name}
+                    className="text-start py-2 font-medium text-sky-700"
+                  >
+                    {e.title}
+                  </label>
+                  <input
+                    type={e.type}
+                    name={e.name}
+                    id={e.name}
+                    value={fields}
+                    className="bg-sky-50 border border-sky-400"
+                    required
+                  />
+                </div>
+              ))}
 
               <div className="grid px-10 pb-10">
                 <label
-                  htmlFor="msg"
+                  htmlFor="msg2"
                   className="text-start py-2 font-medium text-sky-700"
                 >
-                  Mensaje
+                  Dejanos tu consulta en la caja de comentarios
                 </label>
                 <textarea
-                  name="msg"
-                  id="msg"
+                  name="msg2"
+                  id="msg2"
                   cols="30"
                   rows="10"
                   className="bg-sky-50 border border-sky-400"
+                  value={fields}
                 ></textarea>
               </div>
 

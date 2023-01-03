@@ -1,11 +1,32 @@
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
-// import seguros from "../../seguros.json";
+import { useRef, useState } from "react";
+import seguros from "../../seguros.json";
+import formulario from "../../formulario.json";
+import Swal from "sweetalert2";
 
 const CotizaContainer = () => {
+  const [fields, setFields] = useState();
+
+  const clearForm = () => {
+    setFields("");
+  };
+
   const form = useRef();
-  const enviarEmail = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
+    const email = e.target.email.value;
+
+    const regexEmail =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (email !== "" && !regexEmail.test(email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Debes escribir una dirección válida",
+        timer: 1500,
+      });
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -21,8 +42,21 @@ const CotizaContainer = () => {
         (error) => {
           console.log(error.text);
         }
-      )
-      .finally(window.location.reload(false));
+      );
+
+    Swal.fire({
+      title: "Mensaje enviado con exito",
+      icon: "success",
+      timer: 1500,
+    })
+      .then(clearForm)
+      .finally(
+        // eslint-disable-next-line no-global-assign
+        (setTimeout = () => {
+          window.location.reload(true);
+        }),
+        5000
+      );
   };
 
   return (
@@ -36,146 +70,58 @@ const CotizaContainer = () => {
         </p>
 
         <div className="mx-auto md:w-7/12">
-          <form ref={form} onSubmit={enviarEmail}>
-            <div className="grid px-10">
-              <label
-                htmlFor="name"
-                className="text-start py-2 font-medium text-sky-700"
-              >
-                Nombre y Apellido
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="bg-sky-50 border border-sky-400"
-              />
-            </div>
+          <form ref={form} onSubmit={sendEmail}>
+            {formulario.map((e) => (
+              <div className="grid px-10" key={e.name}>
+                <label
+                  htmlFor={e.name}
+                  className="text-start py-2 font-medium text-sky-700"
+                >
+                  {e.title}
+                </label>
+                <input
+                  type={e.type}
+                  name={e.name}
+                  id={e.name}
+                  value={fields}
+                  className="bg-sky-50 border border-sky-400"
+                  required
+                />
+              </div>
+            ))}
 
-            <div className="grid px-10 my-5">
-              <label
-                htmlFor="address"
-                className="text-start py-2 font-medium text-sky-700"
-              >
-                Domicilio
-              </label>
-              <input
-                type="text"
-                name="address"
-                id="address"
-                className="bg-sky-50 border border-sky-400"
-              />
+            <div className="grid px-10 py-6">
+              <div className="text-center border w-48 border-sky-400 text-sky-700 font-medium">
+                <select
+                  className="bg-sky-50"
+                  name="seguro"
+                  id="seguroID"
+                  required
+                  value={fields}
+                >
+                  <option className="text-sky-700 py-2 font-medium" value="">
+                    Seleccioná tu seguro
+                  </option>
+                  {seguros.map((e) => (
+                    <option
+                      className="text-sky-700 py-2 font-medium"
+                      value={e.name}
+                      id="seguroID"
+                      key={e.name}
+                    >
+                      {e.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-
-            <div className="grid px-10 my-5">
-              <label
-                htmlFor="locality"
-                className="text-start py-2 font-medium text-sky-700"
-              >
-                Localidad
-              </label>
-              <input
-                type="text"
-                name="locality"
-                id="locality"
-                className="bg-sky-50 border border-sky-400"
-              />
-            </div>
-
-            <div className="grid px-10 my-5">
-              <label
-                htmlFor="province"
-                className="text-start py-2 font-medium text-sky-700"
-              >
-                Provincia
-              </label>
-              <input
-                type="text"
-                name="province"
-                id="province"
-                className="bg-sky-50 border border-sky-400"
-              />
-            </div>
-
-            <div className="grid px-10 my-5">
-              <label
-                htmlFor="code"
-                className="text-start py-2 font-medium text-sky-700"
-              >
-                Código Postal
-              </label>
-              <input
-                type="number"
-                name="code"
-                id="code"
-                className="bg-sky-50 border border-sky-400"
-              />
-            </div>
-
-            <div className="grid px-10 my-5">
-              <label
-                htmlFor="tel"
-                className="text-start py-2 font-medium text-sky-700"
-              >
-                Teléfono{" "}
-              </label>
-              <input
-                type="tel"
-                name="tel"
-                id="tel"
-                className="bg-sky-50 border border-sky-400"
-              />
-            </div>
-
-            <div className="grid px-10 my-5">
-              <label
-                htmlFor="email"
-                className="text-start py-2 font-medium text-sky-700"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="bg-sky-50 border border-sky-400"
-              />
-            </div>
-
-            {/* <div className="grid px-10 pb-10"> */}
-            {/* <div className="text-start">
-                {seguros.map((e) => (
-                  <p>{e.name}</p>
-                ))}
-              </div> */}
-            {/* <div className="ml-5">
-                {seguros.map((e) => (
-                  <>
-                    <div className="flex items-center">
-                      <input
-                        type="checkbox"
-                        id={e.name}
-                        value={e.name}
-                        className="w-4 h-4 text-blue-600 bg-gray-100"
-                      />
-                      <label
-                        htmlFor={e.name}
-                        className="ml-2 text-lg text-gray-500 dark:text-gray-300"
-                      >
-                        {e.name}
-                      </label>
-                    </div>
-                  </>
-                ))}
-              </div> */}
-            {/* </div> */}
 
             <div className="grid px-10 pb-10">
               <label
                 htmlFor="msg"
                 className="text-start py-2 font-medium text-sky-700"
               >
-                Dejanos un mensaje con el seguro que desees cotizar
+                ¿Querés cotizar más de un seguro? Dejanos un mensaje
               </label>
               <textarea
                 name="msg"
@@ -183,6 +129,7 @@ const CotizaContainer = () => {
                 cols="30"
                 rows="10"
                 className="bg-sky-50 border border-sky-400"
+                value={fields}
               ></textarea>
             </div>
 

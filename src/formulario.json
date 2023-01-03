@@ -1,0 +1,37 @@
+[
+    {
+        "type": "text",
+        "name": "name",
+        "title": "Nombre y Apellido"
+    },
+    {
+        "type": "text",
+        "name": "address",
+        "title": "Domicilio"
+    },
+    {
+        "type": "text",
+        "name": "province",
+        "title": "Provincia"
+    },
+    {
+        "type": "text",
+        "name": "locality",
+        "title": "Localidad"
+    },
+    {
+        "type": "number",
+        "name": "code",
+        "title": "Código Postal"
+    },
+    {
+        "type": "number",
+        "name": "tel",
+        "title": "Teléfono"
+    },
+    {
+        "type": "email",
+        "name": "email",
+        "title": "Email"
+    }
+]

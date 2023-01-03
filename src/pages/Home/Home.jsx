@@ -13,15 +13,14 @@ const Home = () => {
         after:opacity-70 after:bg-sky-50 after:content"
         >
           <h1 className="text-sky-700 font-bold text-4xl mt-40 mb-12 xl:text-6xl">
-            Podés relajarte
+            Protegemos lo que más querés
           </h1>
           <p className="px-5 text-xl">
-            Te asesoramos en tu seguro para que puedas enfocarte en lo que de
-            verdad importa
+            Podemos ayudarte a encontrar la cobertura que más te convenga
           </p>
           <a href="#Cotiza">
             <button className="bg-sky-700 hover:bg-sky-900 text-white font-bold py-3 px-5 w-52 mt-12">
-              Cotiza ahora
+              Cotizá ahora
             </button>
           </a>
         </div>
@@ -47,8 +46,8 @@ const Home = () => {
 
       <div className="fixed top-96 right-0 left-0 z-20">
         <a
-          href="https://walink.co/c8315f"
-          className="absolute z-50 right-0 mt-80 mr-10"
+          href="https://wa.link/4mw910"
+          className="absolute z-50 right-0 mt-80 mr-10 md:mt-96"
           rel="noreferrer"
           target="_blank"
         >
