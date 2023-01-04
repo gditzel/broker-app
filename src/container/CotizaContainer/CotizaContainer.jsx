@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import seguros from "../../seguros.json";
-import formulario from "../../formulario.json";
+import seguros from "../../utils/json/seguros.json";
+import formulario from "../../utils/json/formulario.json";
 import Swal from "sweetalert2";
 
 const CotizaContainer = () => {

@@ -15,11 +15,11 @@ const Home = () => {
           <h1 className="text-sky-700 font-bold text-4xl mt-40 mb-12 xl:text-6xl">
             Protegemos lo que más querés
           </h1>
-          <p className="px-5 text-xl">
+          <p className="px-5 text-xl md:text-2xl">
             Podemos ayudarte a encontrar la cobertura que más te convenga
           </p>
           <a href="#Cotiza">
-            <button className="bg-sky-700 hover:bg-sky-900 text-white font-bold py-3 px-5 w-52 mt-12">
+            <button className="bg-sky-700 hover:bg-sky-900 text-white font-bold py-3 px-5 w-52 mt-12 md:text-2xl rounded-lg">
               Cotizá ahora
             </button>
           </a>
@@ -32,7 +32,9 @@ const Home = () => {
       </div>
 
       <section id="Coberturas">
-        <h1 className="text-center text-2xl my-10 xl:text-4xl">Coberturas</h1>
+        <h1 className="text-4xl md:text-6xl font-bold py-10 text-center">
+          Coberturas
+        </h1>
         <CardIconContainer />
       </section>
 

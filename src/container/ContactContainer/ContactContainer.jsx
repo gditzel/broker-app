@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
-import formulario2 from "../../formulario2.json";
+import formulario2 from "../../utils/json/formulario2.json";
 import Swal from "sweetalert2";
 
 import Phone from "../../utils/svg/Phone";

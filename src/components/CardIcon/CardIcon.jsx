@@ -1,10 +1,10 @@
-import seguros from "../../seguros.json";
+import seguros from "../../utils/json/seguros.json";
 
 const CardIcon = () => {
   return (
     <>
       {seguros.map((e) => (
-        <div key={e.name}>
+        <div key={e.name} className="md:hover:scale-110 transition ease-in-out">
           <div className="flex justify-center h-40">
             <img src={e.image} alt={e.imageAlt} />
           </div>

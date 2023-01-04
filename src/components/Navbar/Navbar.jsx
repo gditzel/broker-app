@@ -1,64 +1,62 @@
-import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
+import CloseIcon from "../../utils/svg/CloseIcon";
+import HamIcon from "../../utils/svg/HamIcon";
 import Logo from "../../assets/img/logo.png";
 
-export default function Example() {
+import links from "../../utils/json/links.json";
+
+const Navbar = () => {
+  const [openMenu, setOpenMenu] = useState(true);
+
+  const onClickMobile = () => {
+    if (openMenu ? setOpenMenu(false) : setOpenMenu(true));
+  };
+
   return (
-    <Disclosure
-      as="nav"
-      className="bg-white sticky top-0 left-0 right-0 border-b z-10"
-    >
-      {({ open }) => (
-        <>
-          <div className="mx-auto md:px-32">
-            <div className="flex justify-between items-center">
-              <a href="/">
-                <img className="h-24" src={Logo} alt="Logo" />
-              </a>
-              <div className="items-center hidden sm:ml-6 sm:block w-96">
-                <ul className="flex justify-between">
-                  <li>
-                    <a href="#Coberturas">Coberturas</a>
-                  </li>
-                  <li>
-                    <a href="#Contacto">Contacto</a>
-                  </li>
-                  <li>
-                    <a href="#Cotiza">Cotizá ahora</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400">
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
+    <>
+      <header className="md:flex items-center justify-around sticky top-0 left-0 right-0 border-b z-10 bg-white">
+        <div className="flex items-center justify-between">
+          <a href="/">
+            <img className="h-24" src={Logo} alt="Logo" />
+          </a>
+          <div className="mr-2 mb-2 flex justify-between md:absolute md:top-0 md:right-0 md:m-7">
+            <div className="flex gap-3 md:gap-10">
+              <button onClick={onClickMobile} className="mt-1 md:hidden">
+                {openMenu ? <HamIcon /> : <CloseIcon />}
+              </button>
             </div>
           </div>
+        </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="text-center">
-              <ul className="text-gray-500 absolute bg-white px-3 py-2 w-screen h-72 text-base font-medium pt-12">
-                <li className="mb-10">
-                  <a href="#Coberturas">Coberturas</a>
+        {!openMenu ? (
+          <>
+            <ul className="absolute left-0 top-0 h-screen w-2/3 animate-leftAnimation bg-white text-center font-semibold text-lg md:hidden z-20">
+              {links.map((e) => (
+                <li onClick={onClickMobile} className="mt-20" key={e.name}>
+                  <a href={e.ref}>{e.name}</a>
                 </li>
-                <li className="mb-10">
-                  <a href="#Contacto">Contacto</a>
-                </li>
-                <li>
-                  <a href="#Cotiza">Cotizá ahora</a>
-                </li>
-              </ul>
+              ))}
+            </ul>
+          </>
+        ) : (
+          <>
+            <div className="flex justify-between items-center">
+              <div className="items-center hidden sm:ml-6 md:block w-96">
+                <ul className="flex justify-between md:text-xl">
+                  {links.map((e) => (
+                    <li className="hover:underline" key={e.name}>
+                      <a href={e.ref}>{e.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+          </>
+        )}
+      </header>
+    </>
   );
-}
+};
+
+export default Navbar;

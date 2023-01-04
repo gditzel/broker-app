@@ -19,8 +19,8 @@ const Footer = () => {
               <img src={dataFiscal} alt="dataFiscal" />
             </a>
           </div>
-          <div className="h-16 w-16 bg-white p-5 ml-5">PDP</div>
-          <div className="h-10 w-20 bg-white p-5 ml-5">Data</div>
+          {/* <div className="h-16 w-16 bg-white p-5 ml-5">PDP</div>
+          <div className="h-10 w-20 bg-white p-5 ml-5">Data</div> */}
         </div>
         <div className="flex">
           <h1 className="text-gray-400 p-5">
