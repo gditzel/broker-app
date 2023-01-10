@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <div>
         <div
-          className="absolute w-full text-center h-screen bgbg isolate after:absolute after:-z-10 after:inset-0
+          className="absolute w-full text-center h-screen isolate after:absolute after:-z-10 after:inset-0
         after:opacity-70 after:bg-sky-50 after:content"
         >
           <h1 className="text-sky-700 font-bold text-4xl mt-40 mb-12 xl:text-6xl">
