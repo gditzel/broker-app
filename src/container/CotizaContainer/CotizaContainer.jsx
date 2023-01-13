@@ -30,10 +30,10 @@ const CotizaContainer = () => {
 
     emailjs
       .sendForm(
-        "service_hjhmq3t",
-        "template_2ezpekb",
+        "service_4tfm0ld",
+        "template_namoi7u",
         form.current,
-        "AIb21sO4WASqiL1oy"
+        "WNL0HoBrEPsC7aUTj"
       )
       .then(
         (result) => {
