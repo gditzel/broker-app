@@ -12,14 +12,14 @@ const Home = () => {
           className="absolute w-full text-center h-screen isolate after:absolute after:-z-10 after:inset-0
         after:opacity-70 after:bg-sky-50 after:content"
         >
-          <h1 className="text-sky-700 font-bold text-4xl mt-40 mb-12 xl:text-6xl">
+          <h1 className="text-sky-700 font-bold text-4xl mt-40 mb-12 xl:text-6xl font-montserrat">
             Protegemos lo que más querés
           </h1>
-          <p className="px-5 text-xl md:text-2xl">
+          <p className="px-5 text-xl md:text-2xl font-baskerville">
             Podemos ayudarte a encontrar la cobertura que más te convenga
           </p>
           <a href="#Cotiza">
-            <button className="bg-sky-700 hover:bg-sky-900 text-white font-bold py-3 px-5 w-52 mt-12 md:text-2xl rounded-lg">
+            <button className="bg-sky-700 hover:bg-sky-900 text-white font-bold py-3 px-5 w-52 mt-12 md:text-2xl rounded-lg font-montserrat">
               Cotizá ahora
             </button>
           </a>
@@ -32,7 +32,7 @@ const Home = () => {
       </div>
 
       <section id="Coberturas">
-        <h1 className="text-4xl md:text-6xl font-bold py-10 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold py-10 text-center text-sky-700 font-montserrat">
           Coberturas
         </h1>
         <CardIconContainer />
@@ -49,7 +49,7 @@ const Home = () => {
       <div className="fixed top-96 right-0 left-0 z-20">
         <a
           href="https://wa.link/4mw910"
-          className="absolute z-50 right-0 mt-80 mr-10 md:mt-96"
+          className="absolute z-50 right-0 mt-40 mr-10"
           rel="noreferrer"
           target="_blank"
         >

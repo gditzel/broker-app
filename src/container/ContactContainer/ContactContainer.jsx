@@ -64,8 +64,10 @@ const ContactContainer = () => {
   return (
     <>
       <div className="text-center bg-gray-200">
-        <h1 className="text-4xl md:text-6xl font-bold pt-10">Contacto</h1>
-        <p className="my-10 text-gray-600">
+        <h1 className="text-4xl md:text-6xl font-bold pt-10 text-sky-700 font-montserrat">
+          Contacto
+        </h1>
+        <p className="my-6 text-gray-600 font-baskerville text-lg">
           Completa el formulario y te estaremos respondiendo a la brevedad.
         </p>
         <div className="md:flex mx-auto md:w-11/12 lg:w-10/12">
@@ -98,7 +100,7 @@ const ContactContainer = () => {
             </p>
           </div>
 
-          <div className="w-screen">
+          <div className="w-screen font-montserrat text-lg">
             <form ref={form} onSubmit={enviarEmail}>
               {formulario2.map((e) => (
                 <div className="grid px-10" key={e.name}>

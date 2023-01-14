@@ -31,7 +31,7 @@ const Navbar = () => {
 
         {!openMenu ? (
           <>
-            <ul className="absolute left-0 top-0 h-screen w-2/3 animate-leftAnimation bg-white text-center font-semibold text-lg md:hidden z-20">
+            <ul className="absolute left-0 top-0 h-screen w-2/3 animate-leftAnimation bg-white text-center font-semibold text-lg md:hidden z-20 font-montserrat">
               {links.map((e) => (
                 <li onClick={onClickMobile} className="mt-20" key={e.name}>
                   <a href={e.ref}>{e.name}</a>
@@ -43,7 +43,7 @@ const Navbar = () => {
           <>
             <div className="flex justify-between items-center">
               <div className="items-center hidden sm:ml-6 md:block w-96">
-                <ul className="flex justify-between md:text-xl">
+                <ul className="flex justify-between md:text-xl font-montserrat">
                   {links.map((e) => (
                     <li className="hover:underline" key={e.name}>
                       <a href={e.ref}>{e.name}</a>

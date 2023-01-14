@@ -9,8 +9,8 @@ const CardIcon = () => {
             <img src={e.image} alt={e.imageAlt} />
           </div>
           <div className="text-center">
-            <h1 className="font-semibold">{e.name}</h1>
-            <p className="text-gray-600 px-10 mb-10 max-w-md mx-auto">
+            <h1 className="font-semibold font-montserrat text-xl">{e.name}</h1>
+            <p className="text-gray-600 px-10 mb-10 max-w-md mx-auto font-baskerville text-lg">
               {e.desc}
             </p>
           </div>

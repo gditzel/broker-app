@@ -1,4 +1,5 @@
 import dataFiscal from "../../assets/img/DATAWEB.jpg";
+import dataFiscal2 from "../../assets/img/dataweb2.jpeg";
 import ArrowTop from "../../utils/svg/ArrowTop";
 
 const Footer = () => {
@@ -8,9 +9,9 @@ const Footer = () => {
 
   return (
     <>
-      <div className="bg-black h-52 sm:flex justify-around items-center">
-        <div className="flex">
-          <div className="w-24 p-5 ml-5">
+      <div className="bg-black sm:flex justify-center items-center">
+        <div className="flex justify-center">
+          <div className="w-24 p-5">
             <a
               href="https://www.argentina.gob.ar/aaip/datospersonales/reclama/23424961574--RL-2022-109639285-APN-DNPDP#AAIP"
               rel="noreferrer"
@@ -19,15 +20,26 @@ const Footer = () => {
               <img src={dataFiscal} alt="dataFiscal" />
             </a>
           </div>
-          {/* <div className="h-16 w-16 bg-white p-5 ml-5">PDP</div>
-          <div className="h-10 w-20 bg-white p-5 ml-5">Data</div> */}
+          <div className="w-52 my-auto p-5">
+            <a
+              href="https://www.argentina.gob.ar/aaip/datospersonales/reclama/23424961574--RL-2022-109639285-APN-DNPDP#AAIP"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img src={dataFiscal2} alt="dataFiscal" />
+            </a>
+          </div>
         </div>
-        <div className="flex">
-          <h1 className="text-gray-400 p-5">
+        <div className="text-center text-teal-100 font-montserrat">
+          <h1>Tamara G. Luque</h1>
+          <p>Matricula Nacional N° 92310</p>
+        </div>
+        <div className="flex justify-center">
+          <h1 className="text-gray-400 p-5 font-montserrat">
             &#169; IntegralAsseg <span className="text-sm">2022</span>
           </h1>
           <button onClick={scrollTop}>
-            <div className="bg-orange-400 rounded-full p-2 text-white">
+            <div className="bg-orange-400 rounded-full p-2 text-teal-100">
               <ArrowTop />
             </div>
           </button>

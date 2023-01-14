@@ -62,14 +62,14 @@ const CotizaContainer = () => {
   return (
     <>
       <div className="text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-sky-700 pt-10">
+        <h1 className="text-4xl md:text-6xl font-bold text-sky-700 pt-10 font-montserrat">
           Cotización online
         </h1>
-        <p className="my-10 text-gray-600">
+        <p className="my-6 text-gray-600 font-baskerville text-lg">
           Completa el formulario y te estaremos respondiendo a la brevedad.
         </p>
 
-        <div className="mx-auto md:w-7/12">
+        <div className="mx-auto md:w-7/12 font-montserrat text-lg">
           <form ref={form} onSubmit={sendEmail}>
             {formulario.map((e) => (
               <div className="grid px-10" key={e.name}>
@@ -90,8 +90,8 @@ const CotizaContainer = () => {
               </div>
             ))}
 
-            <div className="grid px-10 py-6">
-              <div className="text-center border w-48 border-sky-400 text-sky-700 font-medium">
+            <div className="px-10 py-6">
+              <div className="text-center border w-52 border-sky-400 text-sky-700 font-medium">
                 <select
                   className="bg-sky-50"
                   name="seguro"
