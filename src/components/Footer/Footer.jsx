@@ -1,5 +1,4 @@
-import dataFiscal from "../../assets/img/DATAWEB.jpg";
-import dataFiscal2 from "../../assets/img/dataweb2.jpeg";
+import proteccionDeDatos from "../../assets/img/dataweb2.jpeg";
 import ArrowTop from "../../utils/svg/ArrowTop";
 
 const Footer = () => {
@@ -13,11 +12,14 @@ const Footer = () => {
         <div className="flex justify-center">
           <div className="w-24 p-5">
             <a
-              href="https://www.argentina.gob.ar/aaip/datospersonales/reclama/23424961574--RL-2022-109639285-APN-DNPDP#AAIP"
-              rel="noreferrer"
-              target="_blank"
+              href="http://qr.afip.gob.ar/?qr=BFbVmuYJUO6NYxNZZ1MPXA,,"
+              target="_F960AFIPInfo"
             >
-              <img src={dataFiscal} alt="dataFiscal" />
+              <img
+                src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"
+                border="0"
+                alt="Data fiscal"
+              />
             </a>
           </div>
           <div className="w-52 my-auto p-5">
@@ -26,7 +28,7 @@ const Footer = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <img src={dataFiscal2} alt="dataFiscal" />
+              <img src={proteccionDeDatos} alt="Proteccion de datos" />
             </a>
           </div>
         </div>
