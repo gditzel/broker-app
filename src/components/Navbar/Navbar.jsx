@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import CloseIcon from "../../utils/svg/CloseIcon";
 import HamIcon from "../../utils/svg/HamIcon";
-import Logo from "../../assets/img/logo.png";
+import Logo from "../../assets/img/Logo.jpeg";
 
 import links from "../../utils/json/links.json";
 
@@ -18,7 +18,7 @@ const Navbar = () => {
       <header className="md:flex items-center justify-around sticky top-0 left-0 right-0 border-b z-10 bg-white">
         <div className="flex items-center justify-between">
           <a href="/">
-            <img className="h-24" src={Logo} alt="Logo" />
+            <img className="h-32" src={Logo} alt="Logo" />
           </a>
           <div className="mr-2 mb-2 flex justify-between md:absolute md:top-0 md:right-0 md:m-7">
             <div className="flex gap-3 md:gap-10">
